@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notatnik ucznia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/tf.png" />
+    <script src="./javascript/script.js" defer></script>
+    <script src="./javascript/script2.js" defer></script>
+    <script src="./javascript/snow.js" defer></script>
+  </head>
+  <body>
+    <div id="snow"></div>
+    <div class="x hidden">
+      <div class="color-menu hidden">
+        <h2 class="notclickable">
+          Możesz tutaj zmienić tło strony <button id="close">X</button>
+        </h2>
+        <p>
+          <input
+            type="color"
+            id="colorID"
+            oninput="changeColor()"
+            value="#44aaaa"
+          />
+        </p>
+      </div>
+    </div>
+    <header>
+      <h1>Kurs HTML / CSS - "Notatnik ucznia"</h1>
+      <button id="button">Kolor tła</button>
+      <p id="time">&nbsp;</p>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li>
+          <button id="btn1">Podstawowe pojęcia</button>
+        </li>
+        <li>
+          <button id="btn2">Technologie webowe</button>
+        </li>
+        <li>
+          <button id="btn3">HTML</button>
+        </li>
+        <li>
+          <button id="btn4">CSS</button>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <h2 id="title1">Rodzaje technologii webowych ▼</h2>
+        <div id="content1" class="hidden">
+          <p>
+            Tworzenie i publikowanie dokumentów hipertekstowych, zwanych
+            powszechnie stronami WWW (ang. World Wide Web) jest jedną z
+            najpopularniejszych usług sieciowych. Do tworzenie stron używa się
+            różnych technologii określanych jako webowe. Technologie webowe są
+            to wszystkie języki programowania i techniki multimedialne oraz
+            sieciowe, pozwalające na jak najlepsze, kreatywne i uniwersalne
+            tworzenie stron i aplikacji internetowych - interpretowanych zarówno
+            na urządzeniach stacjonarnych, jak i mobilnych.
+          </p>
+          <p>
+            Początkowo strony zawierały głównie tekst, hiperłacza oraz grafikę
+            statyczną i były tworzone wyłacznie z wykorzystaniem języka HTML.
+          </p>
+          <div class="bg">
+            <p>
+              HTML (ang. HyperText Markup Language) - hipertekstowy język
+              znaczników wykorzystywany do tworzenia dokumentów hipertekstowych,
+              które są interpretowane przez przeglądarkę internetową.
+            </p>
+          </div>
+          <p>
+            Z czasem jednak, kiedy przepustowość sieci rosła, a przeglądarki
+            pozwalały na więcej, zaczęto tworzyć witryny internetowe
+            korzystające z różnych technologii. Obecnie technologie webowe
+            konfigurujemy według obszarów działania. Wyróżniamy:
+          </p>
+          <p>
+            FRONT-END - technologie wykorzystujące kod jawny, wykonywany po
+            stronie przeglądarki kienta/użytkownika;
+          </p>
+          <p>
+            BACK-END - technologie wykorzystujące kod ukryty (tajny), wykonywany
+            po stronie serwera.
+          </p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title2">Front-end ▼</h2>
+        <div id="content2" class="hidden">
+          <p>
+            Webowe technologie front end odpowiadają za interfejs strony. Ważne
+            jest jednak, aby podkreślić, że nie chodzi tylko o grafikę, ale o
+            cały UX (user experience), czyli o doświadczenie użytkowników, aby
+            korzystanie ze strony lub aplikacji było przyjemne i funkcjonalne.
+            Do podstawowych języków programowania zaliczamy:
+          </p>
+          <div class="bg">
+            <p>
+              CSS - definiuje wizualną strukturę różnych części strony
+              internetowej. Innymi słowy, określa sposób postrzegania strony
+              (czyli jej wygląd) poprzez określenie zastosowanych kolorów,
+              czcionek, czy rodzajów tła. Jest to zatem język uzupełniający
+              HTML.
+            </p>
+          </div>
+          <div class="bg">
+            <p>
+              JavaScript - to język, który okazał się stymulatorem rozwoju stron
+              internetowych, ponieważ umożliwia umieszczanie w witrynach
+              interaktywnych i dynamicznych elementów, takich jak wyskakujące
+              okienka i animacje. JavaScript służy również do zarządzania
+              interakcją między elementami a użytkownikiem. JS mylnie bywa
+              nazywany Javą, jednak ta technologia wykorzystywana jest do
+              tworzenia aplikacji i stanowi rozwiązanie z zakresu technologii
+              back-endowych.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title3">Back-end ▼</h2>
+        <div id="content3" class="hidden">
+          <p>
+            Programista back-endu, tworząc oprogramowanie, pracuje „za
+            kulisami”. W rzeczywistości dba o działanie strony internetowej lub
+            aplikacji webowej po stronie serwera. Wśród najczęściej
+            poszukiwanych technologii backendowych wyróżniamy PHP, Java, Python
+            oraz Ruby.
+          </p>
+          <div class="bg">
+            <p>
+              Java bywa określana językiem niezbędnym w pracy programisty, ze
+              względu na swoją niezależność od systemów operacyjnych.
+              Najczęściej wykorzystywana jest do tworzenia nowoczesnych
+              aplikacji.
+            </p>
+          </div>
+          <div class="bg">
+            <p>
+              PHP to język skryptowy, który sprawia, że witryny internetowe są
+              dynamiczne. Odpowiada za zwracanie wyniku skryptu do klienta. Jest
+              również wykorzystywany do tworzenia aplikacji internetowych po
+              stronie serwera.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

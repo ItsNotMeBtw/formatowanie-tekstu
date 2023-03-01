@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notatnik ucznia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/tf.png" />
+    <script src="./javascript/script.js" defer></script>
+    <script src="./javascript/script3.js" defer></script>
+    <script src="./javascript/snow.js" defer></script>
+  </head>
+  <body>
+    <div class="x hidden">
+      <div class="color-menu hidden">
+        <h2 class="notclickable">
+          Możesz tutaj zmienić tło strony <button id="close">X</button>
+        </h2>
+        <p>
+          <input
+            type="color"
+            id="colorID"
+            oninput="changeColor()"
+            value="#44aaaa"
+          />
+        </p>
+      </div>
+    </div>
+    <header>
+      <h1>Kurs HTML / CSS - "Notatnik ucznia"</h1>
+      <button id="button">Kolor tła</button>
+      <p id="time">&nbsp;</p>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li>
+          <button id="btn1">Podstawowe pojęcia</button>
+        </li>
+        <li>
+          <button id="btn2">Technologie webowe</button>
+        </li>
+        <li>
+          <button id="btn3">HTML</button>
+        </li>
+        <li>
+          <button id="btn4">CSS</button>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <h2 id="title1">Składnia języka HTML ▼</h2>
+        <div id="content1" class="hidden">
+          <p>
+            Podstawowymi elementami w języku HTML są znaczniki (ang. tag).
+            Znaczniki to polecenia interpretowane przez przegladarkę
+            internetową. Są one otoczone nawiasami kątowymi. Znacznik może
+            posiadać atrybut, a atrybut może mieć przypisaną wartość.
+          </p>
+          <p>Przykład:</p>
+          <img
+            src="./img/script/html2.png"
+            alt="przykład składni języka HTML"
+            width="100%"
+          />
+          <p>Znaczniki możemy podzielić na:</p>
+          <ul>
+            <li>
+              SPAROWANE - tworzące parę znaczników, z których jeden otwiera
+              element składni języka HTML, np. &lt;title&gt;
+            </li>
+            <li>
+              NIESPAROWANE - składające się tylko ze znacznika otwierającego,
+              np. &lt;br&gt; lub &lt;hr&gt;
+            </li>
+          </ul>
+          <p>
+            Dodatkowo w składni języka HTML są stosowane znaki specjalne, np.
+            &amp;, który pozwala na wstawienie twardej spacji. Składnia języka
+            HTML dopuszcza równiez wstawianie komentarzy. Budowa komentarza
+            wygląda następująco:
+          </p>
+          <img
+            src="./img/script/html3.png"
+            alt="komentarz w języku HTML"
+            width="100%"
+          />
+          <p>
+            Składnia języka HTML dopuszcza zagnieżdżanie znaczników. Jednak
+            należy pamietać o tym, że zamykamy je w odwrotnej kolejności do tej,
+            w której je otwieraliśmy.
+          </p>
+          <img
+            src="./img/script/html4.png"
+            alt="przykład zagnieżdżania znaczników w języku HTML"
+            width="100%"
+          />
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title2">Struktura dokumentu HTML ▼</h2>
+        <div id="content2" class="hidden">
+          <p>
+            W strukturze poprawnego dokumentu należy wyróżnić następujące
+            elementy:
+          </p>
+          <ul>
+            <li>deklarację typu dokumentu - DOCTYPE</li>
+            <li>definicję dokumentu - HTML</li>
+            <li>nagłówek dokumentu - HEAD</li>
+            <li>treść dokumentu - BODY</li>
+          </ul>
+          <img
+            src="./img/script/html1.png"
+            alt="przykładowa struktura strony w języku HTML"
+            width="100%"
+          />
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title3">Podstawowe znaczniki i atrybuty ▼</h2>
+        <div id="content3" class="hidden">
+          <h3>Formatowanie tekstu</h3>
+          <p>
+            Pomimo, ze większość znaczników prezentacji treści została wycofana
+            ze specyfikacji HTML5, nadal możemy korzystać z elementów
+            określających proste formatowanie tekstu w oknie przegladarki
+            internetowej. W tabeli przedstawiono podstawowe znaczniki do
+            formatowania tekstu.
+          </p>
+          <table>
+            <tr>
+              <th>Znaczniki</th>
+              <th>Opis</th>
+              <th>Wynik</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">b</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">b</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>pogrubienie</td>
+              <td><b>tekst</b></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">i</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">i</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>kursywa</td>
+              <td><i>tekst</i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">u</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">u</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Podkreślenie</td>
+              <td><u>tekst</u></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">s</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">s</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Przekreślenie</td>
+              <td><s>tekst</s></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">mark</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">mark</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Podświetlenie</td>
+              <td><mark>tekst</mark></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">font</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">font</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Czcionka</td>
+              <td><font face="Verdana" size="4" color="red">tekst</font></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">em</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">em</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Wyróżnienie tekstu</td>
+              <td><em>tekst</em></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">sub</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">sub</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Indeks dolny</td>
+              <td>tekst<sub>2</sub></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">sup</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">sup</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Indeks dolny</td>
+              <td>tekst<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">strong</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">strong</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Czcionka mocno pogrubiona</td>
+              <td><strong>tekst</strong></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">hr&nbsp;</span>
+                  <span class="white">/&gt;</span>
+                </div>
+              </td>
+              <td>Linia pozioma</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">br&nbsp;</span>
+                  <span class="white">/&gt;</span>
+                </div>
+              </td>
+              <td>Łamanie wiersza</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">p</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">p</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Akapit tekstu</td>
+              <td>tekst</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">h1</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">h1</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Nagłówek strony (h1 - h6)</td>
+              <td><h1>tekst</h1></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="code">
+                  <span class="white">&lt;</span>
+                  <span class="blue">pre</span>
+                  <span class="white">&gt;</span>
+                  <span class="lightblue">tekst</span>
+                  <span class="white">&lt;/</span>
+                  <span class="blue">pre</span>
+                  <span class="white">&gt;</span>
+                </div>
+              </td>
+              <td>Bloki preformatowane</td>
+              <td><pre>tekst</pre></td>
+            </tr>
+          </table>
+          <h3>Znaki specjalne</h3>
+          <p>
+            Składnia języka HTML wymaga czasem wprowadzenia dodatkowych znaków,
+            zwanych znakami specjalnymi. Znaki specjalne możemy wprowadzić do
+            dokumentu hipertekstowego w postaci kodu dziesiętnego,
+            szesnastkowego oraz nazwy własnej.
+          </p>
+          <table>
+            <tr>
+              <th>Znak specjalny</th>
+              <th>Nazwa</th>
+              <th>Opis</th>
+            </tr>
+            <tr>
+              <td>&amp;</td>
+              <td>&amp;amp;</td>
+              <td>Znak "ampersand"</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>&amp;lt;</td>
+              <td>Znak mniejszości</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>&amp;gt;</td>
+              <td>Znak większości</td>
+            </tr>
+            <tr>
+              <td>&sect;</td>
+              <td>&amp;sect;</td>
+              <td>Znak sekcji / paragrafu</td>
+            </tr>
+            <tr>
+              <td>&trade;</td>
+              <td>&amp;trade;</td>
+              <td>Zastrzerzony znak towarowy</td>
+            </tr>
+            <tr>
+              <td>&copy;</td>
+              <td>&amp;copy;</td>
+              <td>Znak praw autorskich</td>
+            </tr>
+            <tr>
+              <td>&reg;</td>
+              <td>&amp;reg;</td>
+              <td>Zastrzerzony znak towarowy</td>
+            </tr>
+            <tr>
+              <td>&euro;</td>
+              <td>&amp;euro;</td>
+              <td>Znak euro</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&amp;nbsp;</td>
+              <td>Znak twardej spacji</td>
+            </tr>
+          </table>
+          <h3>Bloki Preformatowane</h3>
+          <p>
+            Tekst napisany wewnątrz znaków &lt;pre&gt; i &lt;/pre&gt; zachowuje
+            podczas wyświetlania w przeglądarce internetowej wszystkie spacje,
+            tabulacje i złamania wiersza. Daje to możliwość wymuszania
+            formatowania dla danego bloku tekstu.
+          </p>
+          <h3>Listy (wykazy)</h3>
+          <p>
+            Kolejne ważne, bo często stosowane w praktyce tagi HTML to listy
+            (numerowane i nienumerowane). Czasem nazywamy je także
+            uporządkowanymi i nieuporządkowanymi.
+          </p>
+          <div class="bg">
+            <h3>Lista nieuporządkowana (nienumerowana)</h3>
+            <p>
+              Z angielskiego unordered list - jest zdefiniowana przez znaczniki
+              &lt;ul&gt;&lt;/ul&gt; zaś pojedynczyelement takiej listy zamknięty
+              jest w znacznikach &lt;li&gt;&lt;/li&gt; z angielskiego list item.
+            </p>
+          </div>
+          <p>Widok w kodzie HTML:</p>
+          <img
+            src="./img/script/html5.png"
+            alt="widok listy nieuporządkowanej w HTML"
+            width="100%"
+          />
+          <h3>Zagnieżdżanie list</h3>
+          <p>
+            Oczywiście w niektórych przypadkach zajdzie potrzeba tzw.
+            zagnieżdżania list , czyli stworzenia listy wewnętrznej wewnątrz
+            znaczników &lt;li&gt;&lt;/li&gt; listy zewnętrznej. W poniższym
+            przykładzie lista zewnętrzna to lista numerowana, a wewnętrzna to
+            lista nienumerowana (choć równie dobrze można by zagnieździć je
+            odwrotnie):
+          </p>
+          <p>Widok w kodzie HTML:</p>
+          <img
+            src="./img/script/html6.png"
+            alt="przykład zagnieżdżania list"
+            width="100%"
+          />
+          <h3>Odsyłacze (linki)</h3>
+          <p>
+            Odsyłacze zwane także odnośnikami lub hiperłączami są łącznikiem
+            pomiędzy dokumentami html serwisu internetowego, innymi słowy
+            umożliwiają przejście pomiędzy kolejnymi podstronami oraz jej
+            częściami (kotwica).
+          </p>
+          <h3>Struktura hiperłącza</h3>
+          <img
+            src="./img/script/html7.png"
+            alt="struktura hiperłącza"
+            width="100%"
+          />
+          <h3>Grupowanie elementów liniowych &lt;span&gt;</h3>
+          <p>
+            Pojemnik, na pierwszy rzut oka podobny do &lt;div&gt;, jednak w
+            odróżnieniu od niego &lt;span&gt; nie zachowuje się blokowo (nie
+            spowoduje zmian w strukturze blokowej witryny, niczego nie
+            przesunie). Słowo span ma w języku angielskim wiele znaczeń, jednak
+            w tym kontekście tłumaczymy go jako zasięg/rozpiętość. Najczęściej
+            element &lt;span&gt; tworzymy po to, aby zdefiniować zasięg
+            działania jakiejś klasy w CSS'ie.
+          </p>
+          <p>
+            Sam znacznik nie posiada żadnej roli, poza właśnie prostym
+            zdefiniowaniem iż odtąd dotąd obowiązuje dany styl. Dla tego też
+            atrybutami znacznika &lt;span&gt; będą najczęściej class, albo
+            ewentualnie &lt;style&gt;. Dobrym praktycznym przykładem
+            zastosowania &lt;span&gt;, jest chęć zapisania jednego wyrazu innym
+            kolorem czcionki, na przykład czerwonym.
+          </p>
+          <h3>Wprowadzenie cytatów</h3>
+          <p>
+            Odniesienie do źródła &lt;cite&gt; - Zwykle zapisywany jest kursywą.
+            Możemy umieścić w nim na przykład tytuł książki, opracowania,
+            wiersza, piosenki, filmu, gry, albo obrazu, ale nie sam cytat.
+          </p>
+          <p>
+            Krótki cytat &lt;q&gt; - Przeglądarki zwykle automatycznie ujmują
+            tekst tego znacznika w cudzysłowiu (""). Umieszcza się w nim treść
+            krótkich cytatów, które nie zawierają żadnych akapitów. Jeżeli
+            chcemy zacytować dłuższy fragment tekstu z kilkoma paragrafami,
+            powinniśmy wykorzystać &lt;blockquote&gt;.
+          </p>
+          <h3>Znaczniki linii poziomej &lt;hr&gt;</h3>
+          <p>
+            Jednym z elementów, który ułatwi nam przygotowanie przejrzystego
+            układu strony jest znacznik &lt;hr&gt;. Biegnie on po całej
+            szerokości strony lub kontenera, w którym jest zdefiniowany. Jego
+            wygląd jest edytowany w CSS'ie.
+          </p>
+          <h3>Wstawianie obrazów na stronę</h3>
+          <p>
+            Trudno spotkać stronę, na której nie ma obrazów, grafik ani galerii
+            zdjęć. Ten element jest niezwykle istotną częścią strony. Znacznie
+            podnosi atrakcyjność i formę przekazu.
+          </p>
+          <p>PRZYKŁAD</p>
+          <img
+            src="./img/script/html8.png"
+            alt="wstawianie obrazka"
+            width="100%"
+          />
+          <p>
+            W powyższym przykładzie alt sprawi, że na stronie pojawi się opis w
+            przypadku, gdyby obrazek nie został wyświetlony. Z kolei title
+            wyświetli tytuł po najechaniu na obrazek. Należy pamiętać, że opis
+            powinien być zgodny z obrazkiem.
+          </p>
+          <h3>Hiperłącze w obrazku</h3>
+          <p>
+            Zostanie uruchomione w przypadku kliknięcia obrazu, do którego
+            podana została ścieżka dostępu. Dzięki temu można stwożyć np.
+            efektowne przyciski.
+          </p>
+          <p>PRZYKŁAD</p>
+          <img
+            src="./img/script/html9.png"
+            alt="hiperłącze w obrazku"
+            width="100%"
+          />
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title4">Podział strony i obsługa danych ▼</h2>
+        <div id="content4" class="hidden">
+          <h3>Znacznik &lt;div&gt;</h3>
+          <p>
+            Aby pogrupować wiele różnych elementów strony, albo wydzielić
+            większy fragment dokumentu, można wykorzystać znacznik &lt;div&gt;,
+            który tworzy oddzielny blok. Te elementy, zwane również pudełkami
+            lub kontenerami obowiązywały w HTML4, ale nadal są bardzo popularne.
+            Za pomocą tego znacznika można podzielić stronę internetową na takie
+            bloki jak: nagłówek, panele (np. panel lewy, panel prawy), paski
+            nawigacji, stopka. Elementy &lt;div&gt; są elementami blokowymi, tak
+            jak np. znacznik &lt;p&gt;. Zajmują one całą szerokość strony.
+            Domyślnie nie są formatowane, tj. nie są nadane żadne obramowanie,
+            kolor wypełnienia czy szerokość. Wygląd poszczególnych bloków można
+            określić za pomocą atrybutu style.
+          </p>
+          <p>PRZYKŁAD</p>
+          <div class="blocks1">
+            <div class="blok1">Pierwszy blok</div>
+            <div class="blok2">Drugi blok</div>
+            <div class="blok3">Trzeci blok</div>
+          </div>
+          <p></p>
+          <p>
+            Nie jest to jednak najlepszy sposób formatowania bloku. Kod źródła
+            strony staje się mało czytelny. Lepszym sposobem jest stosowanie
+            atrybutów id oraz class, czyli wyodrębnianie poszczególnych bloków
+            przez nadanie im identyfikatora lub klasy.
+          </p>
+          <p>
+            Domyślnie element blokowy układa się pod poprzedzającym go
+            elementem. Jeżeli chcielibyśmy umieścić dwa bloki obok siebie, nie
+            wystarczy określić ich szerokości na 50%. Mimo że zmieściły by się
+            obok, to i tak ułożą się jeden pod drugim. Jeżeli chcemy, żeby bloki
+            układały się obok siebie, musimy zastosować flexbox i ustawić
+            wartość flex-direction na row.
+          </p>
+          <p>PRZYKŁAD</p>
+          <div class="blocks2 bx">
+            <div class="blok211 bx">Pierwszy blok</div>
+            <div class="blok221 bx">Drugi blok</div>
+            <div class="blok222 bx">Trzeci blok</div>
+            <div class="blok212 bx">Czwarty blok</div>
+          </div>
+          <p></p>
+          <h3>Znaczniki semantyczne podziału strony</h3>
+          <p>
+            Wraz z opublikowaniem specyfikacji HTML5 wprowadzono nowe elementy
+            blokowe, które mają zastąpić opisywany wcześniej znacznik
+            &lt;div&gt; i sprecyzować rolę określonych fragmentów dokumentu.
+            Znaczniki są jednoznacznie interpretowane przez przeglądarkę i nie
+            wymagają użycia dodatkowych atrybutów definiujących ich rolę.
+          </p>
+          <p>PRZYKŁAD</p>
+          <div class="xblokwrapper bx">
+            <div class="xheader bx">&lt;header&gt;</div>
+            <div class="xnav bx">&lt;nav&gt;</div>
+            <div class="xcenter">
+              <div class="xaside bx">&lt;aside&gt;</div>
+              <div class="xright">
+                <div class="xsection1 bx">&lt;section&gt;</div>
+                <div class="xsection2 bx">&lt;section&gt;</div>
+                <div class="xsection3 bx">
+                  <div class="xarticle1 bx">&lt;article&gt;</div>
+                  <div class="xarticle2 bx">&lt;article&gt;</div>
+                </div>
+              </div>
+            </div>
+            <div class="xfooter bx">&lt;footer&gt;</div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title5">Tabele ▼</h2>
+        <div id="content5" class="hidden">
+          <h3>Informacje ogólne</h3>
+          <p>
+            Tabele wykorzystywane są do prezentacji danych. Można w nich
+            umieszczać takie elementy, jak: obrazy, teksty, linki itp. Składają
+            się z wierszy. Każdy wiersz ma określoną liczbę komórek, dlatego
+            tworząc tabelę w języku HTML, należy nie tylko zdefiniować ją za
+            pomocą znacznika &lt;table&gt;, ale także zdefiniować każdy jej
+            wiersz przy użyciu znacznika &lt;tr&gt; oraz każdą komórkę w wierszu
+            za pomocą znacznika &lt;td&gt;. Nagłówek tabeli jest definiowany z
+            zastosowaniem znacznika &lt;th&gt;. Domyślne nagłówki tabeli są
+            pogrubione i wyśrodkowane, a cała tabela jest wyświetlana bez
+            obramowań. Rodzaj i styl obramowania należy ustawić za pomocą
+            właściwości w arkuszach stylów CSS.
+          </p>
+          <table>
+            <tr>
+              <th>Imię</th>
+              <th>Nazwisko</th>
+              <th>Ocena</th>
+            </tr>
+            <tr>
+              <td>Ewa</td>
+              <td>Nowak</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Arkadiusz</td>
+              <td>Stanisławski</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Jan</td>
+              <td>Kowalski</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>Reda</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Krzysztof</td>
+              <td>Jaromin</td>
+              <td>5</td>
+            </tr>
+          </table>
+          <h3>Łączenie komórek</h3>
+          <p>
+            W języku HTML oprócz tabel, które mają taką samą liczbę komórek w
+            każdym wierszu, można tworzyć tabele z różną liczbą komórek w każdym
+            wierszu, można tworzyć tabele z różną liczbą komórek w wierszu.
+            Efekt ten uzyskuje się poprzez łączenie komórek z sąsiednich kolumn.
+            Aby połączyć kilka komórek w wierszu, nazleży w znaczniku &lt;th&gt;
+            lub &lt;td&gt; zdefiniować atrybut colspan="x", gdzie x określa, ile
+            sąsiednich komórek zostanie połączonych.
+          </p>
+          <p>
+            Łączenie komórek tabeli może się odbywać również w kolumnach.
+            Łączone są komórki tej samej kolumny znajdujące się w sąsiednich
+            wierszach. Do takiego łączenia komórek służy definiowany w znaczkinu
+            &lt;td&gt; atrybut rowspan="x".
+          </p>
+          <table>
+            <tr>
+              <td colspan="2">A1 + B1</td>
+              <td rowspan="3" class="morewidth">C1 + C2 + C3</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td>B2</td>
+            </tr>
+            <tr>
+              <td>A3</td>
+              <td>B3</td>
+            </tr>
+            <tr>
+              <td>A4</td>
+              <td>B4</td>
+              <td class="morewidth">C4</td>
+            </tr>
+            <tr>
+              <td colspan="2">A5 + B5</td>
+              <td class="morewidth">C5</td>
+            </tr>
+            <tr>
+              <td>A6</td>
+              <td>B6</td>
+              <td class="morewidth">C6</td>
+            </tr>
+          </table>
+          <h3>Tytuł tabeli - znacznik &lt;caption&gt;</h3>
+          <p>Tytuł tabeli dodajemy za pomocą znacznika &lt;caption&gt;</p>
+          <table>
+            <caption>
+              Przykład scalania
+            </caption>
+            <tr>
+              <td colspan="2">A1 + B1</td>
+              <td rowspan="3" class="morewidth">C1 + C2 + C3</td>
+            </tr>
+            <tr>
+              <td>A2</td>
+              <td>B2</td>
+            </tr>
+            <tr>
+              <td>A3</td>
+              <td>B3</td>
+            </tr>
+            <tr>
+              <td>A4</td>
+              <td>B4</td>
+              <td class="morewidth">C4</td>
+            </tr>
+            <tr>
+              <td colspan="2">A5 + B5</td>
+              <td class="morewidth">C5</td>
+            </tr>
+            <tr>
+              <td>A6</td>
+              <td>B6</td>
+              <td class="morewidth">C6</td>
+            </tr>
+          </table>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title6">Multimedia ▼</h2>
+        <div id="content6" class="hidden">
+          <h3>Wstawianie plików muzycznych</h3>
+          <p>
+            W języku HTML5 występują znaczniki pozwalające na osadzanie plików
+            multimedialnych w kodzie dokumentu. Nie każda przeglądarka obsługuje
+            wszystkie formaty plików audio i video. Należy o tym pamiętać
+            podczas projektowania strony.
+          </p>
+          <p>
+            Do umieszczania plików audio służy znacznik &lt;audio&gt;. Może
+            zawierać jedno lub kilka źródeł dźwięku podanych jako wartość
+            atrybutu src. Przeglądarka wybierze wówczas najbardziej odpowiedni
+            dla niej zapis.
+          </p>
+          <p>PRZYKŁAD</p>
+          <img
+            src="./img/script/audio1.png"
+            alt="plik muzyczny w html"
+            width="100%"
+          />
+          <img
+            src="./img/script/audio2.png"
+            alt="plik muzyczny w html"
+            width="100%"
+          />
+          <audio controls="controls" src="./muzyka/alvaro_soler.mp3"></audio>
+          <br />
+          <audio controls>
+            <source src="./muzyka/alvaro_soler_2.mp3" />
+          </audio>
+          <h3>Wstawianie plików filmowych</h3>
+          <p>
+            Do umieszczenia plików video służy znacznik &lt;video&gt;. Do
+            standardowych atrybutów tego znacznika zaliczamy:
+          </p>
+          <ul>
+            <li><b>src</b> - definiuje ścieżkę URL do pliku</li>
+            <li>
+              <b>poster</b> - definiuje ścieżkę do obrazka, który będzie
+              wyświetlany w trakcie ładowania filmu
+            </li>
+            <li>
+              <b>autoplay</b> - automatyczne odtwarzanie podczas ładowania filmu
+            </li>
+            <li><b>controls</b> - wyświetlanie panelu sterowania</li>
+            <li><b>loop</b> - pętla odtwarzania filmu</li>
+          </ul>
+          <p>PRZYKŁAD</p>
+          <img
+            src="./img/script/film.png"
+            alt="umieszczanie filmu w html"
+            width="100%"
+          />
+          <div class="vid">
+            <video width="500" height="400" poster="./img/poster.png" controls>
+              <source src="./filmy/dzien_otwarty_2021.mp4" />
+            </video>
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notatnik ucznia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/tf.png" />
+    <script src="./javascript/script.js" defer></script>
+    <script src="./javascript/script1.js" defer></script>
+    <script src="./javascript/snow.js" defer></script>
+  </head>
+  <body>
+    <div id="snow"></div>
+    <div class="x hidden">
+      <div class="color-menu hidden">
+        <h2 class="notclickable">
+          Możesz tutaj zmienić tło strony <button id="close">X</button>
+        </h2>
+        <p>
+          <input
+            type="color"
+            id="colorID"
+            oninput="changeColor()"
+            value="#44aaaa"
+          />
+        </p>
+      </div>
+    </div>
+    <header>
+      <h1>Kurs HTML / CSS - "Notatnik ucznia"</h1>
+      <button id="button">Kolor tła</button>
+      <p id="time">&nbsp;</p>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li>
+          <button id="btn1">Podstawowe pojęcia</button>
+        </li>
+        <li>
+          <button id="btn2">Technologie webowe</button>
+        </li>
+        <li>
+          <button id="btn3">HTML</button>
+        </li>
+        <li>
+          <button id="btn4">CSS</button>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <h2 id="title1">Historia i rozwój języka HTML ▼</h2>
+        <div id="content1" class="hidden">
+          <p>
+            W 1980 fizyk Tim Berners-Lee, pracujący dla ośrodka
+            naukowo-badawczego CERN, stworzył prototyp hipertekstowego  systemu
+            informacyjnego – ENQUIRE . System wykorzystywano do organizowania i
+            udostępniania dokumentów związanych z badaniami naukowymi.
+            Rewolucyjność pomysłu polegała na tym, że użytkownik, posługując się
+            odnośnikami, mógł z jednej lokalizacji przeglądać dokumenty
+            fizycznie znajdujące się w innych miejscach na świecie. W 1989
+            Berners-Lee i inżynier oprogramowania CERN Robert
+            Cailliau przedstawili równolegle dwie propozycje hipertekstowych
+            systemów informacyjnych opartych na sieci Internet. Oba projekty
+            cechowała podobna funkcjonalność. Rok później opracowali wspólną
+            propozycję zaakceptowaną przez CERN – projekt WorldWideWeb (W3).
+          </p>
+          <p>
+            Pierwsza, publicznie dostępna, specyfikacja języka HTML, nazwana
+            HTML Tags  (znaczniki HTML), została zamieszczona w Internecie przez
+            Bernersa-Lee w 1991. Zawierała 24 znaczniki, tworzące początkowy,
+            prosty szkielet HTML-a. Można uznać, że był to standard HTML1,
+            chociaż nie pojawiła się oficjalna specyfikacja tego języka.
+          </p>
+          <div class="image">
+            <a
+              href="http://info.cern.ch/hypertext/WWW/TheProject.html"
+              target="_blank"
+            >
+              <img
+                src="./img/www-site.png"
+                alt="Pierwsza strona WWW"
+                width="940px"
+              />
+            </a>
+          </div>
+          <p>
+            W 1993 roku Mark Anderson udostepnił pierwszą graficzną przeglądarkę
+            stron internetowych - Mosaic. Pierwsza oficjalna specyfikacja
+            języka HTML2.0 została opublikowana w 1995 roku przez IETF. Niedługo
+            potem powołano do czuwania nad rozwojem standardów pisania stron
+            internetowych organizację W3C (ang. World Wide Web Consortium).
+          </p>
+          <p>
+            Po opublikowaniu specyfikacji HTML3.2 w roku 1997 przystąpiono do
+            prac nad specyfikacją języka HTML, związanego z kaskadowymi
+            arkuszami stylów CSS, które przejmowały główny ciężar formatowania
+            stron internetowych. Tym samym oddzielono strukturę logiczną tekstu
+            od struktury prezentacji. W roku 1999 ukazała się
+            specyfikacja HTML4. Jednak dopiero w 2001 roku udało się zakończyć
+            pracę nad stabilną, interpretowaną przez wszystkie przeglądarki
+            specyfikacją HTML4.1.
+          </p>
+          <p>
+            Nastepnym krokiem w rozwoju języka HTML było dostosowanie składni do
+            standardów wprowadzonych przez metajęzyk XML. XML wykorzystujemy do
+            budowania strukturyzowanych form prezentacji danych w przeglądarkach
+            internetowych i aplikacjach bazodanowych. W ten sposób powstała
+            specyfikacja języka XHTML1.0, która jest prostą ewolucją XHTML4.1
+            pozwalającą współpracować z dokumentami XML.
+          </p>
+          <p>
+            Dynamiczny rozwój przeglądarek internetowych spowodował rozłam w
+            planowaniu przyszłości języków hipertekstowych. Oprócz W3C powstała
+            druga organizacja zajmująca się rozwojem stron WWW
+            - WHATWG (ang. Web Hypertext Application Technology Working Group).
+            Tworzyli ją głównie przedstawiciele Apple, Mozilli i Opery. Głównym
+            celem tej organizacji był rozwój technologii umozliwiających
+            tworzenie na podstawie kodu HTML bardziej zaawansowanych aplikacji
+            sieciowych.
+          </p>
+          <p>
+            Po kilku latach rozwijania równoległych projektów W3C ogłosiła chęć
+            współpracy z organizacją WHATWG w rozwijaniu języka HTML. Efektem
+            tej współpracy jest specyfikacja języka HTML5, która jest obecnie
+            zalecana jako narzędzie do tworzenia stron internetowych.
+            Opublikowano ja w roku 2014.
+          </p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2 id="title2">Podstawowe pojęcia dotyczące stron WWW ▼</h2>
+        <div id="content2" class="hidden">
+          <dl>
+            <dt>Statyczna strona internetowa</dt>
+            <dd>
+              To strona z określonymi na stałe parametrami formatowania jej
+              zawartości.
+            </dd>
+            <dt>Dynamiczna strona internetowa</dt>
+            <dd>
+              Jest to rodzaj strony internetowej, której treści mogą się
+              zmieniać w zależności od konfiguracji.
+            </dd>
+            <dt>Witryna internetowa</dt>
+            <dd>
+              Zbiór stron, adresów URL i podstron będących częścią wspólnej
+              domeny.
+            </dd>
+            <dt>Portal internetowy</dt>
+            <dd>
+              Rodzaj serwisu informatycznego (informacyjnego), poprzez który
+              użytkownicy mają dostęp do nowych informacji z wielu dziedzin.
+            </dd>
+            <dt>Wortal internetowy</dt>
+            <dd>
+              Portal wyspecjalizowany, publikujący informacje z jednej
+              dziedziny, tematycznie do siebie zbliżone.
+            </dd>
+            <dt>System zarządzania treścią CMS</dt>
+            <dd>
+              Oprogramowanie umożliwiające w łatwy i przyjazny sposób tworzenie,
+              edytowanie i aktualizacje treści oraz informacji na stronie bez
+              znajomości HTML, CSS, PHP, czy JS.
+            </dd>
+            <dt>Serwer WWW</dt>
+            <dd>
+              Oprogramowanie zainstalowane na komputerze (zwanym potocznie
+              serwerem internetowym), które umożliwia dostęp do przechowywanych
+              w swoich zasobach stron www.
+            </dd>
+            <dt>Blog</dt>
+            <dd>
+              Rodzaj internetowego dziennika, prowadzonego przez regularne
+              publikowanie wpisów tematycznych.
+            </dd>
+            <dt>Serwer baz danych</dt>
+            <dd>
+              Oprogramowanie bądź system informatyczny służący do zarządzania
+              bazą danych.
+            </dd>
+            <dt>Responsywna strona internetowa</dt>
+            <dd>
+              Strona dostosowywująca się do wielkości okna przeglądarki. Wygląda
+              ona dobrze zarówno na szerokim ekranie komputera jak i na wąskim
+              ekranie telefonu.
+            </dd>
+          </dl>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
